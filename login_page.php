@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="css/font-body.css">
 
 <title>PRE-ASEANA-TOOL</title>
-<link rel="icon" type="image/x-icon" href="icon/database-table.ico">
+<link rel="icon" type="image/x-icon" href="icon/indonesia.ico">
 </head>
 <style>
 
@@ -119,6 +119,7 @@
 
 <div class="sidenav">
     <img src="icon/database-table.png" width=143 height=auto style="position:relative; top:115px; left:55px">
+    <img src="icon/indonesia.png" width=143 height=auto style="position:relative; top:115px; left:55px">
          <div class="login-main-text">
             <p style="margin:0">pre</p>
             <h2>ASEANA<br>Management Information System</h2>

@@ -24,7 +24,7 @@ if(!isset($_SESSION["name"])){
     <head>
 
         <title>PRE-ASEANA-TOOL</title>
-        <link rel="icon" type="image/x-icon" href="icon/database-table.ico">
+        <link rel="icon" type="image/x-icon" href="icon/indonesia.ico">
         
     </head>
 
