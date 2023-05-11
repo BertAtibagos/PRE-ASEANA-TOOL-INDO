@@ -67,14 +67,13 @@ max-width: 100%
         <label for="categories" class="">&nbspin</label>
         <select name="srch_fld" id="categories" style="width:93%;   height:30px;">
           <option value="REG_ID">Registration ID</option>
-          <option value="BUSINESS_NAME" selected>Business Name</option>
-          <option value="TAXPAYER">Taxpayer</option>
-          <option value="TYPE">Type</option>
+          <option value="YEAR" selected>Year</option>
+          <option value="COMPANY_NAME">Company Name</option>
+          <option value="DATE_REGISTERED">Date registered</option>
+          <option value="STATUS">Status</option>
           <option value="ADDRESS">Address</option>
-          <option value="BUSINESS_LINE">Business Line</option>
-          <option value="ACTIVITY">Activity</option>
-          <option value="REG_DATE">Registered Date</option>
-          <option value="2010-Present">2010-Present</option>
+          <option value="REGISTRATION_CODE">Registration code</option>
+          <option value="CATEGORY_LIST">List of categories</option>
         </select>
       </p>
     </div>
