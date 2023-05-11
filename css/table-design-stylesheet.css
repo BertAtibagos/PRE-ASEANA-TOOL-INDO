@@ -1,0 +1,106 @@
+.unselectable {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*design sa table */
+/* table {
+  width: 100%;
+  text-align: center;
+  border-collapse: separate; 
+  border-spacing: 0;
+  overflow-x:auto;
+   */
+table {
+   table-layout:fixed;
+   text-align:center;
+   /* border-collapse: collapse;  */
+   border-collapse: separate; 
+   font-size:65%;
+   width: 100%;
+   overflow-x:hidden;
+   cursor: cell;
+   border:2;
+
+}
+
+td i {
+  font-size: 14px;
+  margin: 0 3px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+th {
+  position: sticky;
+  top:-2px;
+  padding: 16px;
+
+  text-align: center;
+  background-color: #27292C;
+  border: 1px solid #949494;
+  color: #fff; 
+} 
+
+th {
+
+  padding: 1%;
+
+  text-align: center;
+  background-color: #27292C;
+  border: 1px solid #949494;
+  color: #fff;
+}
+.h2th{
+  top:108px !important;
+}
+
+table td, #table th {
+  border: 1px solid #949494;
+
+}
+
+table tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+  
+table tr:hover td {
+  border-color: #daa035;
+  background-color: #FFC150;
+
+}
+  
+table  tr:hover + tr td {
+  border-top-color: #daa035;
+}
+
+.action-btn td a.edit {
+ color: #27292C;
+ 
+}
+
+.action-btn td a.edit:hover {
+  color: #1877f2;
+}
+
+.action-btn td a.archive {
+  color: #27292C
+}
+
+.action-btn td a.archive:hover {
+  color: #f0284a;
+}
+
+.action-btn td a.restore {
+  color: #27292C
+}
+
+.action-btn td a.restore:hover {
+  color: #f0284a;
+}
+
+
+

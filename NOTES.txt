@@ -1,0 +1,18 @@
+<form action="sort-page.php"  >
+    <input  class="sort-button red" type="submit" value="Return">
+</form>
+<form method=POST action='sort-data.php'>&nbsp
+      <input  class="sort-button green`" type='submit' value='Export' name='Export'>
+      File name:
+      <input class="input-width" type="text" placeholder="File name" name="filename"required>
+ 
+      <?php 
+      $serialize_user_arr = serialize($user_arr);
+      ?>
+      <textarea name='export_data' style='display: none;'><?php echo $serialize_user_arr; ?></textarea>
+  </form>
+
+
+<head>
+    <link rel="stylesheet" href="css/sort-results-stylesheet.css">
+</head>

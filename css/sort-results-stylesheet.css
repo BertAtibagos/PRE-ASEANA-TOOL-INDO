@@ -1,0 +1,23 @@
+.sort-button{
+background-color:#393F45;
+color:#ffff;
+width:100px;
+height:30px;
+border-radius:5px;
+transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+border:none;
+}
+
+.green:hover{
+    background-color:#2abba7;
+}
+
+.red:hover{
+    background-color:#f0284a;
+}
+
+.input-width{
+    width:200px;
+    height:30px;
+    }
+    

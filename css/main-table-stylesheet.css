@@ -1,0 +1,6 @@
+.sticky-div {
+  position: sticky;
+  top: 0;
+  background:#ebebeb;
+  height:110px;
+  }
