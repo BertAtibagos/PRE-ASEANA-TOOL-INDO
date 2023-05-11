@@ -3,7 +3,7 @@
 $srvr = "localhost";
 $user = "root";
 $pass = "";
-$db = "businessdt_db";
+$db = "preaseana_indo_db";
 $conn = new mysqli($srvr,$user, $pass, $db);
 
 if (!$conn){
