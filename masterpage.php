@@ -33,7 +33,7 @@ if(!isset($_SESSION["name"])){
  
     <div id="mySidebar" class="sidebar shadow" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
     
-        <img src="icon\database-table.png" class ="logo">
+        <img src="icon\indonesia.png" class ="logo">
 
         <div style=" position: absolute; font: 15px Arial; top: 20px; left:90px; color: #fff;">
         
