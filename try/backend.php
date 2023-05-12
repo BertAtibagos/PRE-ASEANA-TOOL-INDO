@@ -9,7 +9,7 @@ if(isset($_POST['checkedId']) && isset($_POST['deleteAll'])){
 $fetchData = fetch_data($conn);
 
 function fetch_data($conn){
-  $query = "SELECT REG_ID, BUSINESS_NAME, TAXPAYER, TYPE, ADDRESS, BARANGAY, BUSINESS_LINE, ACTIVITY, REG_DATE FROM businessdt_tbl";
+  $query = "SELECT REG_ID, YEAR, COMPANY_NAME, DATE_REGISTERED, STATUS, ADDRESS, REGISTRATION_CODE, CATEGORY_LIST FROM businessdt_tbl";
   $result = $conn->query($query);
 
    if ($result->num_rows > 0) {

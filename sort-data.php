@@ -10,7 +10,7 @@ $export_data = unserialize($_POST['export_data']);
 
 
 $file = fopen($filename,"w");
-$fields = array('REG_ID', 'BUSINESS_NAME', 'TAXPAYER', 'TYPE', 'ADDRESS','BARANGAY','BUSINESS_LINE','ACTIVITY','REG_DATE');
+$fields = array('REG_ID', 'YEAR', 'COMPANY_NAME', 'DATE_REGISTERED', 'STATUS','ADDRESS','REGISTRATION_CODE','CATEGORY_LIST');
 fputcsv($file,$fields);
 
 foreach ($export_data as $line){

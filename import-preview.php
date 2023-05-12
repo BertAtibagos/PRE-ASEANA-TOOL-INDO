@@ -22,15 +22,14 @@ td{
                 <thead class="thead-dark">
 
                     <tr>
-                        <th>ID</th>
-                        <th>Business Name</th>
-                        <th>Taxpayer</th>
-                        <th>Type</th>
-                        <th>Address</th>
-                        <th>Barangay</th>
-                        <th>Business Line</th>
-                        <th>Activity</th>
-                        <th>Registration Date</th>
+                        <th>REGISTRATION ID</th>
+                        <th>YEAR</th>
+                        <th>COMPANY NAME</th>
+                        <th>DATE REGISTERED</th>
+                        <th>STATUS</th>
+                        <th>ADDRESS</th>
+                        <th>REGISTRATION CODE</th>
+                        <th>LIST OF CATEGORIES</th>
                     </tr>
 
                 </thead>
@@ -43,14 +42,13 @@ td{
                     ?>
                         <tr>
                             <td><?php echo $row['ID']; ?></td>
-                            <td><?php echo $row['BUSINESS_NAME']; ?></td>
-                            <td><?php echo $row['TAXPAYER']; ?></td>
-                            <td><?php echo $row['TYPE']; ?></td>
+                            <td><?php echo $row['YEAR']; ?></td>
+                            <td><?php echo $row['COMPANY_NAME']; ?></td>
+                            <td><?php echo $row['DATE_REGISTERED']; ?></td>
+                            <td><?php echo $row['STATUS']; ?></td>
                             <td><?php echo $row['ADDRESS']; ?></td>
-                            <td><?php echo $row['BARANGAY']; ?></td>
-                            <td><?php echo $row['BUSINESS_LINE']; ?></td>
-                            <td><?php echo $row['ACTIVITY']; ?></td>
-                            <td><?php echo $row['REGDATE']; ?></td>
+                            <td><?php echo $row['REGISTRATION_CODE']; ?></td>
+                            <td><?php echo $row['CATEGORY_LIST']; ?></td>
                         </tr>
                         <?php } }else{ ?>
                             <tr><td colspan="9" style="height: 50px; font-size: 15px">Import preview will appear here!</td></tr>

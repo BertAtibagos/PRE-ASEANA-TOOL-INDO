@@ -67,15 +67,34 @@ include 'controller/connection.php';
 echo"<BR>";
 
 if($alpha_srt=="true"){
-$sql = "SELECT * FROM businessdt_tbl  ORDER BY BUSINESS_NAME ASC";
+$sql = "SELECT * FROM businessdt_tbl  ORDER BY COMPANY_NAME ASC";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result)> 0){
-    echo"<TABLE border=2 cellpadding=5><TR><TH>Registration ID</TH><TH>BUSINESS_NAME</TH><TH>TAXPAYER</TH><TH>TYPE</TH><TH>ADDRESS</TH><TH>BARANGAY</TH>
-    <TH>BUSINESS_LINE</TH><TH>ACTIVITY</TH><TH>REG_DATE</TH>";
+    echo"<TABLE border=2 cellpadding=5>
+    <TR>
+    <TH>Registration ID</TH>
+    <TH>BUSINESS_NAME</TH>
+    <TH>TAXPAYER</TH>
+    <TH>TYPE</TH>
+    <TH>ADDRESS</TH>
+    <TH>BARANGAY</TH>
+    <TH>BUSINESS_LINE</TH>
+    <TH>ACTIVITY</TH>
+    <TH>REG_DATE</TH>
+    </TR>";
     while($row = mysqli_fetch_assoc($result)){
-        echo"<TR><TD>". $row["REG_ID"]. "</TD><TD>". $row["BUSINESS_NAME"]. "</TD><TD>" . $row["TAXPAYER"]. "</TD><TD>" .$row["TYPE"]. "</TD><TD>" .$row["ADDRESS"]. "</TD>
-        <TD>" .$row["BARANGAY"]. "</TD><TD>" .$row["BUSINESS_LINE"]. "</TD><TD>" .$row["ACTIVITY"]. "</TD><TD>" .$row["REG_DATE"]. "</TD></TR>";
+        echo"<TR>
+        <TD>". $row["REG_ID"]. "</TD>
+        <TD>". $row["BUSINESS_NAME"]. "</TD>
+        <TD>" . $row["TAXPAYER"]. "</TD>
+        <TD>" .$row["TYPE"]. "</TD>
+        <TD>" .$row["ADDRESS"]. "</TD>
+        <TD>" .$row["BARANGAY"]. "</TD>
+        <TD>" .$row["BUSINESS_LINE"]. "</TD>
+        <TD>" .$row["ACTIVITY"]. "</TD>
+        <TD>" .$row["REG_DATE"]. "</TD>
+        </TR>";
     }
     echo"</TABLES>";
 }else {

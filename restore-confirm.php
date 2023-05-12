@@ -90,11 +90,27 @@ include 'controller/connection.php';
 $sql = "SELECT * FROM archv_businessdt_tbl WHERE REG_ID = '$ed_key'";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result)> 0){
-	echo"<TABLE class=customers><TR><TH>Registration ID</TH><TH>BUSINESS_NAME</TH><TH>TAXPAYER</TH><TH>TYPE</TH><TH>ADDRESS</TH><TH>BARANGAY</TH>
-    <TH>BUSINESS_LINE</TH><TH>ACTIVITY</TH><TH>REG_DATE</TH>";
+	echo"<TABLE class=customers>
+  <TR>
+  <TH>REGISTRATION ID</TH>
+  <TH>YEAR</TH>
+  <TH>COMPANY NAME</TH>
+  <TH>DATE REGISTERED</TH>
+  <TH>STATUS</TH>
+  <TH>ADDRESS</TH>
+  <TH>REGISTRATION CODE</TH>
+  <TH>LIST OF CATEGORIES</TH>
+  </TR>";
 	while($row1 = mysqli_fetch_assoc($result)){
-		echo"<TR><TD>". $row1["REG_ID"]. "</TD><TD>". $row1["BUSINESS_NAME"]. "</TD><TD>" . $row1["TAXPAYER"]. "</TD><TD>" .$row1["TYPE"]. "</TD><TD>" .$row1["ADDRESS"]. "</TD>
-        <TD>" .$row1["BARANGAY"]. "</TD><TD>" .$row1["BUSINESS_LINE"]. "</TD><TD>" .$row1["ACTIVITY"]. "</TD><TD>" .$row1["REG_DATE"]. "</TD></TR>";
+		echo"<TR><TD>". $row1["REG_ID"]. "</TD>
+    <TD>". $row1["YEAR"]. "</TD>
+    <TD>" . $row1["COMPANY_NAME"]. "</TD>
+    <TD>" .$row1["DATE_REGISTERED"]. "</TD>
+    <TD>" .$row1["STATUS"]. "</TD>
+    <TD>" .$row1["ADDRESS"]. "</TD>
+    <TD>" .$row1["REGISTRATION_CODE"]. "</TD>
+    <TD>" .$row1["CATEGORY_LIST"]. "</TD>
+    </TR>";
 	}
 	echo"</TABLES>";
 }else {

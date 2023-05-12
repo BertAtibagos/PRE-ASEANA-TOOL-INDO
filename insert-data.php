@@ -4,14 +4,13 @@ session_start()
 <?php
 include 'controller/connection.php';
 $name = $_SESSION["name"];
-$business_name = $_POST["Bus_name"];
-$TAXpayer_name = $_POST["TAX_name"];
-$business_type = $_POST["bus_type"];
-$business_line = $_POST["bus_line"];
-$activity = $_POST["activity"];
-$reg_date = $_POST["reg_date"];
+$year = $_POST["year"];
+$comp_name = $_POST["comp_name"];
+$date_reg = $_POST["date_reg"];
+$stat = $_POST["stat"];
 $address = $_POST["address"];
-$barangay = $_POST["brgy"];
+$reg_code = $_POST["reg_code"];
+$categ_list = $_POST["categ_list"];
 $insert_stat = false;
 $insert_ctr = 1;
 
@@ -30,9 +29,8 @@ while($insert_stat == false){
 	}
 }
 
-$sql = "INSERT INTO businessdt_tbl (REG_ID, BUSINESS_NAME, TAXPAYER, TYPE, ADDRESS, BARANGAY, BUSINESS_LINE, ACTIVITY, REG_DATE) 
-VALUES('$gen_code','$business_name', '$TAXpayer_name', '$business_type', '$address', '$barangay', 
-'$business_line', '$activity', '$reg_date')";
+$sql = "INSERT INTO businessdt_tbl (REG_ID, YEAR, COMPANY_NAME, DATE_REGISTERED, STATUS, ADDRESS, REGISTRATION_CODE, CATEGORY_LIST) 
+VALUES('$gen_code','$year', '$comp_name', '$date_reg', '$stat', '$address', '$reg_code', '$categ_list')";
 $result = mysqli_query($conn,$sql);
 
 if(!$sql){

@@ -116,15 +116,14 @@ include("try/arch-backend.php");
         RESTORE<span><br><i class="	fa fa-repeat" style="margin-top:2px;"></i></span></button>
         </button>
       </th>
-         <th width="80px" >REG_ID</th>
-         <th>BUSINESS_NAME</th>
-         <th>TAXPAYER</th>
-         <th width="90px">TYPE</th>
-         <th>ADDRESS</th>
-         <th  width="100px">BARANGAY</th>
-         <th>BUSINESS_LINE</th>
-         <th>ACTIVITY</th>
-         <th width="90px">REG_DATE</th>
+         <th width="80px" >REGISTRATION ID</th>
+         <th>YEAR</th>
+         <th>COMPANY NAME</th>
+         <th width="90px">DATE REGISTERED</th>
+         <th>STATUS</th>
+         <th  width="100px">ADDRESS</th>
+         <th>REGISTRATION CODE</th>
+         <th>LIST OF CATEGORIES</th>
          <th width="80px">ACTION</th>
          
     </thead>
@@ -137,14 +136,13 @@ include("try/arch-backend.php");
       <tr>
       <td><input type="checkbox" name="checkedId[]" value="<?php echo $data['REG_ID']??''?>" onclick="DoCheckUncheckDisplay(this,'checkbox-checked','checkbox-unchecked')"></td>
       <td><?php echo $data['REG_ID']??''; ?></td>
-      <td><?php echo $data['BUSINESS_NAME']??''; ?></td>
-      <td><?php echo $data['TAXPAYER']??''; ?></td>
-      <td><?php echo $data['TYPE']??''; ?></td>
+      <td><?php echo $data['YEAR']??''; ?></td>
+      <td><?php echo $data['COMPANY_NAME']??''; ?></td>
+      <td><?php echo $data['DATE_REGISTERED']??''; ?></td>
+      <td><?php echo $data['STATUS']??''; ?></td>
       <td><?php echo $data['ADDRESS']??''; ?></td>
-      <td><?php echo $data['BARANGAY']??''; ?></td>
-      <td><?php echo $data['BUSINESS_LINE']??''; ?></td>
-      <td><?php echo $data['ACTIVITY']??''; ?></td>
-      <td><?php echo $data['REG_DATE']??''; ?></td>
+      <td><?php echo $data['REGISTRATION_CODE']??''; ?></td>
+      <td><?php echo $data['CATEGORY_LIST']??''; ?></td>
       <TD><?php echo"<div>
 
 

@@ -5,18 +5,18 @@ session_start()
 include 'controller/connection.php';
 $name = $_SESSION["name"];
 $reg_id= $_POST["reg_id"];
-$busname= $_POST["Bus_name"];
-$txpayer = $_POST["TAX_name"];
-$type = $_POST["bus_type"];
-$addrs = $_POST["address"];
-$brgy = $_POST["brgy"];
-$busline = $_POST["bus_line"];
-$actv = $_POST["activity"];
-$regdate = $_POST["reg_date"];
+$year= $_POST["year"];
+$comp_name = $_POST["comp_name"];
+$date_reg = $_POST["date_reg"];
+$stat = $_POST["stat"];
+$address = $_POST["address"];
+$reg_code = $_POST["reg_code"];
+$categ_list = $_POST["categ_list"];
 
 
-$sql = "UPDATE businessdt_tbl SET BUSINESS_NAME = '$busname', TAXPAYER = '$txpayer', TYPE = '$type', 
-ADDRESS = '$addrs', BARANGAY ='$brgy', BUSINESS_LINE ='$busline', ACTIVITY ='$actv', REG_DATE='$regdate'
+
+$sql = "UPDATE businessdt_tbl SET YEAR = '$year', COMPANY_NAME = '$comp_name', DATE_REGISTERED = '$date_reg', 
+STATUS = '$stat', ADDRESS ='$address', REGISTRATION_CODE ='$reg_code', CATEGORY_LIST ='$categ_list'
 WHERE REG_ID = '$reg_id';";
 
 if (mysqli_query($conn, $sql)) {

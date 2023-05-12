@@ -2,7 +2,7 @@
 $hostName = "localhost";
 $userName = "root";
 $password = "";
-$databaseName = "businessdt_db";
+$databaseName = "preaseana_indo_db";
  $conn = new mysqli($hostName, $userName, $password, $databaseName);
 // Check connection
 if ($conn->connect_error) {

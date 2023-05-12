@@ -133,53 +133,46 @@ border: 1px solid #949494;
               <INPUT class="w3-input no-outline" type="text" size=25 name="reg_id" id="regid" value=<?php echo $row["REG_ID"]; ?> readonly>
               </p>
               <p>
-                <i class="fa fa-suitcase"></i><label for="Bus_name">&nbsp Business Name</label>
-                <input class="w3-input no-outline" type="text" id="Bus_name" name="Bus_name" value="<?php echo $row["BUSINESS_NAME"];?>">
+                <i class="fa fa-suitcase"></i><label for="Bus_name">&nbsp YEAR</label>
+                <input class="w3-input no-outline" type="text" id="Bus_name" name="year" value="<?php echo $row["YEAR"];?>">
               </p>
 
              
               <p>
-                <i class="fas fa-building"></i><label for="business_Type">&nbsp Type of Business</label>
+                <i class="fas fa-building"></i><label for="business_Type">&nbsp COMPANY NAME</label>
               </p>
-                <select class="w3-input no-outline select-position"  style=""id="business_Type" name="bus_type" value="<?php echo $row["TYPE"];?>">
-                  <option>Corporation</option>
-                  <option>Partnership</option>
-                  <option>One Person Corporation</option>
-                </select>
+                <input class="w3-input no-outline select-position" type="text" style=""id="business_Type" name="comp_name" value="<?php echo $row["COMPANY_NAME"];?>">
 
               
       </div>
       <div class="column">
               <p>
-                <i class="fas fa-user-circle"></i><label for="TX_name">&nbsp Name of Taxpayer</label>
-                <input class="w3-input no-outline" type="text" id="TX_name" name="TAX_name" value="<?php echo $row["TAXPAYER"];?>">
+                <i class="fas fa-user-circle"></i><label for="TX_name">&nbsp DATE REGISTERED</label>
+                <input class="w3-input no-outline" type="text" id="TX_name" name="date_reg" value="<?php echo $row["DATE_REGISTERED"];?>">
               </p>
               <p>
-                <i class="fas fa-hammer"></i><label for="business_line">&nbsp Business Line</label>
-                    <input class="w3-input no-outline" type="text" id="business_line" name="bus_line" value="<?php echo $row["BUSINESS_LINE"];?>">
+                <i class="fas fa-hammer"></i><label for="business_line">&nbsp STATUS</label>
+                    <input class="w3-input no-outline" type="text" id="business_line" name="stat" value="<?php echo $row["STATUS"];?>">
               </p>
 
               <p>
-                <i class="fas fa-dice"></i><label for="act">&nbsp Business Activity</label>
-                    <input class="w3-input no-outline" type="text" id="act" name="activity" value="<?php echo $row["ACTIVITY"];?>">
+                <i class="fas fa-dice"></i><label for="act">&nbsp ADDRESS</label>
+                    <input class="w3-input no-outline" type="text" id="act" name="address" value="<?php echo $row["ADDRESS"];?>">
               </p>
       </div>
       <div class="column" >
       
               <p>
-                <i class="fas fa-calendar-alt"></i><label for="reg_date">&nbsp Date of Registration</label>
-                    <input class="w3-input no-outline" type="date" id="reg_date" name="reg_date" value="<?php echo $row["REG_DATE"];?>">
+                <i class="fas fa-calendar-alt"></i><label for="reg_date">&nbsp REGISTRATION CODE</label>
+                    <input class="w3-input no-outline" type="date" id="reg_date" name="reg_code" value="<?php echo $row["REGISTRATION_CODE"];?>">
               </p>
 
               <p>
-                <i class="fa fa-home"></i><label for="address">&nbsp Street Address</label>
-                    <input class="w3-input no-outline" type="text" id="address" name="address" value="<?php echo $row["ADDRESS"];?>">
+                <i class="fa fa-home"></i><label for="address">&nbsp LIST OF CATEGORIES</label>
+                    <input class="w3-input no-outline" type="text" id="address" name="categ_list" value="<?php echo $row["CATEGORY_LIST"];?>">
                 </p>
           
-              <p>
-                <i class="fa fa-map-marker"></i><label for="brgy">&nbsp Barangay Address</label>
-                    <input class="w3-input no-outline" placeholder="Muzon" type="text" id="brgy" name="brgy" value="<?php echo $row["BARANGAY"];?>">
-              </p>
+              
 
               <button class="save-changes-cancel-button-design change-button-hover" value="submit" > Save Changes</button>
               <a href="table-page.php"><input type="button" class="save-changes-cancel-button-design cancel-button-hover" value="Cancel"></a>
@@ -204,11 +197,26 @@ border: 1px solid #949494;
             $sql = "SELECT * FROM businessdt_tbl WHERE REG_ID = '$ed_key'";
             $result = mysqli_query($conn, $sql);
             if (mysqli_num_rows($result)> 0){
-                echo"<TABLE class=customers style=margin-top:10px><TR><TH>Registration ID</TH><TH>BUSINESS NAME</TH><TH>TAXPAYER</TH><TH>TYPE</TH><TH>ADDRESS</TH><TH>BARANGAY</TH>
-                <TH>BUSINESS LINE</TH><TH>ACTIVITY</TH><TH>REG DATE</TH>";
+                echo"<TABLE class=customers style=margin-top:10px>
+                <TR><TH>REGISTRATION ID</TH>
+                <TH>YEAR</TH>
+                <TH>COMPANY NAME</TH>
+                <TH>DATE REGISTERED</TH>
+                <TH>STATUS</TH>
+                <TH>ADDRESS</TH>
+                <TH>REGISTRATION CODE</TH>
+                <TH>LIST OF CATEGORIES</TH>";
                 while($row1 = mysqli_fetch_assoc($result)){
-                    echo"<TR><TD>". $row1["REG_ID"]. "</TD><TD>". $row1["BUSINESS_NAME"]. "</TD><TD>" . $row1["TAXPAYER"]. "</TD><TD>" .$row1["TYPE"]. "</TD><TD>" .$row1["ADDRESS"]. "</TD>
-                    <TD>" .$row1["BARANGAY"]. "</TD><TD>" .$row1["BUSINESS_LINE"]. "</TD><TD>" .$row1["ACTIVITY"]. "</TD><TD>" .$row1["REG_DATE"]. "</TD></TR>";
+                    echo"<TR>
+                    <TD>". $row1["REG_ID"]. "</TD>
+                    <TD>". $row1["YEAR"]. "</TD>
+                    <TD>" . $row1["COMPANY_NAME"]. "</TD>
+                    <TD>" .$row1["DATE_REGISTERED"]. "</TD>
+                    <TD>" .$row1["STATUS"]. "</TD>
+                    <TD>" .$row1["ADDRESS"]. "</TD>
+                    <TD>" .$row1["REGISTRATION_CODE"]. "</TD>
+                    <TD>" .$row1["CATEGORY_LIST"]. "</TD>
+                    </TR>";
                 }
                 echo"</TABLES>";
             }else {

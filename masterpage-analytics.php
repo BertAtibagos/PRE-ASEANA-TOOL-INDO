@@ -54,7 +54,7 @@ include 'controller/connection.php';
     <td  class="bold-td">2013</td>
     <td>
       <?php 
-       $sql = "SELECT COUNT(*) AS 2013_data FROM businessdt_tbl  WHERE REG_DATE LIKE '%2013%'";
+       $sql = "SELECT COUNT(*) AS 2013_data FROM businessdt_tbl  WHERE YEAR LIKE '%2013%'";
        $result = mysqli_query($conn, $sql);
        while($row = mysqli_fetch_array($result)){
            echo"<p>".$row['2013_data']."</p>"; 
@@ -67,7 +67,7 @@ include 'controller/connection.php';
     <td class="bold-td">2014</td>
     <td>
     <?php 
-       $sql = "SELECT COUNT(*) AS 2014_data FROM businessdt_tbl  WHERE REG_DATE LIKE '%2014%'";
+       $sql = "SELECT COUNT(*) AS 2014_data FROM businessdt_tbl  WHERE YEAR LIKE '%2014%'";
        $result = mysqli_query($conn, $sql);
        while($row = mysqli_fetch_array($result)){
            echo"<p>".$row['2014_data']."</p>"; 
@@ -80,7 +80,7 @@ include 'controller/connection.php';
     <td class="bold-td">2015</td>
     <td>
     <?php 
-       $sql = "SELECT COUNT(*) AS 2015_data FROM businessdt_tbl  WHERE REG_DATE LIKE '%2015%'";
+       $sql = "SELECT COUNT(*) AS 2015_data FROM businessdt_tbl  WHERE YEAR LIKE '%2015%'";
        $result = mysqli_query($conn, $sql);
        while($row = mysqli_fetch_array($result)){
            echo"<p>".$row['2015_data']."</p>"; 
@@ -93,7 +93,7 @@ include 'controller/connection.php';
     <td class="bold-td">2016</td>
     <td>
     <?php 
-       $sql = "SELECT COUNT(*) AS 2016_data FROM businessdt_tbl  WHERE REG_DATE LIKE '%2016%'";
+       $sql = "SELECT COUNT(*) AS 2016_data FROM businessdt_tbl  WHERE YEAR LIKE '%2016%'";
        $result = mysqli_query($conn, $sql);
        while($row = mysqli_fetch_array($result)){
            echo"<p>".$row['2016_data']."</p>"; 
@@ -106,7 +106,7 @@ include 'controller/connection.php';
     <td class="bold-td">2017</td>
     <td>
     <?php 
-       $sql = "SELECT COUNT(*) AS 2017_data FROM businessdt_tbl  WHERE REG_DATE LIKE '%2017%'";
+       $sql = "SELECT COUNT(*) AS 2017_data FROM businessdt_tbl  WHERE YEAR LIKE '%2017%'";
        $result = mysqli_query($conn, $sql);
        while($row = mysqli_fetch_array($result)){
            echo"<p>".$row['2017_data']."</p>"; 
@@ -119,7 +119,7 @@ include 'controller/connection.php';
     <td class="bold-td">2018</td>
     <td>
     <?php 
-       $sql = "SELECT COUNT(*) AS 2018_data FROM businessdt_tbl  WHERE REG_DATE LIKE '%2018%'";
+       $sql = "SELECT COUNT(*) AS 2018_data FROM businessdt_tbl  WHERE YEAR LIKE '%2018%'";
        $result = mysqli_query($conn, $sql);
        while($row = mysqli_fetch_array($result)){
            echo"<p>".$row['2018_data']."</p>"; 
@@ -132,7 +132,7 @@ include 'controller/connection.php';
     <td class="bold-td">2019</td>
     <td>
     <?php 
-       $sql = "SELECT COUNT(*) AS 2019_data FROM businessdt_tbl  WHERE REG_DATE LIKE '%2019%'";
+       $sql = "SELECT COUNT(*) AS 2019_data FROM businessdt_tbl  WHERE YEAR LIKE '%2019%'";
        $result = mysqli_query($conn, $sql);
        while($row = mysqli_fetch_array($result)){
            echo"<p>".$row['2019_data']."</p>"; 
@@ -145,7 +145,7 @@ include 'controller/connection.php';
     <td class="bold-td">2020</td>
     <td>
     <?php 
-       $sql = "SELECT COUNT(*) AS 2020_data FROM businessdt_tbl  WHERE REG_DATE LIKE '%2020%'";
+       $sql = "SELECT COUNT(*) AS 2020_data FROM businessdt_tbl  WHERE YEAR LIKE '%2020%'";
        $result = mysqli_query($conn, $sql);
        while($row = mysqli_fetch_array($result)){
            echo"<p>".$row['2020_data']."</p>"; 
@@ -158,7 +158,7 @@ include 'controller/connection.php';
     <td class="bold-td">2021</td>
     <td>
     <?php 
-       $sql = "SELECT COUNT(*) AS 2021_data FROM businessdt_tbl  WHERE REG_DATE LIKE '%2021%'";
+       $sql = "SELECT COUNT(*) AS 2021_data FROM businessdt_tbl  WHERE YEAR LIKE '%2021%'";
        $result = mysqli_query($conn, $sql);
        while($row = mysqli_fetch_array($result)){
            echo"<p>".$row['2021_data']."</p>"; 
@@ -171,7 +171,7 @@ include 'controller/connection.php';
     <td class="bold-td">2022</td>
     <td>
     <?php 
-       $sql = "SELECT COUNT(*) AS 2022_data FROM businessdt_tbl  WHERE REG_DATE LIKE '%2022%'";
+       $sql = "SELECT COUNT(*) AS 2022_data FROM businessdt_tbl  WHERE YEAR LIKE '%2022%'";
        $result = mysqli_query($conn, $sql);
        while($row = mysqli_fetch_array($result)){
            echo"<p>".$row['2022_data']."</p>"; 
@@ -184,7 +184,7 @@ include 'controller/connection.php';
     <td class="bold-td">2023</td>
     <td>
     <?php 
-       $sql = "SELECT COUNT(*) AS 2023_data FROM businessdt_tbl  WHERE REG_DATE LIKE '%2023%'";
+       $sql = "SELECT COUNT(*) AS 2023_data FROM businessdt_tbl  WHERE YEAR LIKE '%2023%'";
        $result = mysqli_query($conn, $sql);
        while($row = mysqli_fetch_array($result)){
            echo"<p>".$row['2023_data']."</p>"; 

@@ -19,15 +19,14 @@ include("backend.php");
       <table class="table table-bordered table-striped ">
        <thead><tr><th>S.N</th>
 
-         <th>REG_ID</th>
-         <th>BUSINESS_NAME</th>
-         <th>TAXPAYER</th>
-         <th>TYPE</th>
+         <th>REGISTRATION ID</th>
+         <th>YEAR</th>
+         <th>COMPANY NAME</th>
+         <th>DATE REGISTERED</th>
+         <th>STATUS</th>
          <th>ADDRESS</th>
-         <th>BARANGAY</th>
-         <th>BUSINESS_LINE</th>
-         <th>ACTIVITY</th>
-         <th>REG_DATE</th>
+         <th>REGISTRATION CODE</th>
+         <th>LIST OF CATEGORIES</th>
          <th>ACTION</th>
          
     </thead>
@@ -40,14 +39,13 @@ include("backend.php");
       <tr>
       <td><input type="checkbox" name="checkedId[]" value="<?php echo $data['REG_ID']??''?>"></td>
       <td><?php echo $data['REG_ID']??''; ?></td>
-      <td><?php echo $data['BUSINESS_NAME']??''; ?></td>
-      <td><?php echo $data['TAXPAYER']??''; ?></td>
-      <td><?php echo $data['TYPE']??''; ?></td>
+      <td><?php echo $data['YEAR']??''; ?></td>
+      <td><?php echo $data['COMPANY_NAME']??''; ?></td>
+      <td><?php echo $data['DATE_REGISTERED']??''; ?></td>
+      <td><?php echo $data['STATUS']??''; ?></td>
       <td><?php echo $data['ADDRESS']??''; ?></td>
-      <td><?php echo $data['BARANGAY']??''; ?></td>
-      <td><?php echo $data['BUSINESS_LINE']??''; ?></td>
-      <td><?php echo $data['ACTIVITY']??''; ?></td>
-      <td><?php echo $data['REG_DATE']??''; ?></td>
+      <td><?php echo $data['REGISTRATION_CODE']??''; ?></td>
+      <td><?php echo $data['CATEGORY_LIST']??''; ?></td>
       <TD><?php echo"<div >
 
         <a href=edit_page.php?ed_id=" .$data["REG_ID"] . " class=edit title=Edit data-toggle=tooltip><i class=fas fa-edit>&#xf044;</i></a>

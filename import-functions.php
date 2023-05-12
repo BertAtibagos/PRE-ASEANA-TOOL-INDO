@@ -27,14 +27,13 @@ if(isset($_POST['importSubmit'])){
             
             while(($line = fgetcsv($csvFile)) !== FALSE){
                 
-                $bus_name   = $line[0];
-                $taxpyr = $line[1];
-                $type  = $line[2];
-                $addrs = $line[3];
-                $brgy = $line[4];
-                $bus_line = $line[5];
-                $act= $line[6];
-                $regdate = $line[7];
+                $year  = $line[0];
+                $comp_name = $line[1];
+                $date_reg  = $line[2];
+                $stat = $line[3];
+                $address = $line[4];
+                $reg_code = $line[5];
+                $categ_list= $line[6];
                 
                     $insert_stat = false;
                     $insert_ctr = 1;
@@ -53,14 +52,14 @@ if(isset($_POST['importSubmit'])){
                             $insert_stat = true;
                         }
                     }
-                    $busname = mysqli_real_escape_string($db, $bus_name);
-                    $tax_pyr = mysqli_real_escape_string($db, $taxpyr);
-                    $typ = mysqli_real_escape_string($db, $type);
-                    $address = mysqli_real_escape_string($db, $addrs);
-                    $bargy = mysqli_real_escape_string($db, $brgy);
-                    $busline = mysqli_real_escape_string($db, $bus_line);
-                    $actv = mysqli_real_escape_string($db, $act);
-                    $db->query("INSERT INTO samp_tbl VALUES ('".$gen_code."', '".$busname."', '".$tax_pyr."', '".$typ."', '".$address."', '".$bargy."', '".$busline."','".$actv."',str_to_date('$regdate','%m/%d/%Y'))");
+                    $Year = mysqli_real_escape_string($db, $year);
+                    $name_com = mysqli_real_escape_string($db, $comp_name);
+                    $reg_date = mysqli_real_escape_string($db, $date_reg);
+                    $stats = mysqli_real_escape_string($db, $stat);
+                    $addrss = mysqli_real_escape_string($db, $address);
+                    $regcode = mysqli_real_escape_string($db, $reg_code);
+                    $categ = mysqli_real_escape_string($db, $categ_list);
+                    $db->query("INSERT INTO samp_tbl VALUES ('".$gen_code."', '".$Year."', '".$name_com."', '".$reg_date."', '".$stats."', '".$addrss."', '".$regcode."','".$categ."'");
                         
                     
                     
