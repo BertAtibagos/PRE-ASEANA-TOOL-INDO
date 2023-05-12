@@ -73,27 +73,25 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result)> 0){
     echo"<TABLE border=2 cellpadding=5>
     <TR>
-    <TH>Registration ID</TH>
-    <TH>BUSINESS_NAME</TH>
-    <TH>TAXPAYER</TH>
-    <TH>TYPE</TH>
+    <TH>REGISTRATION ID</TH>
+    <TH>YEAR</TH>
+    <TH>COMPANY NAME</TH>
+    <TH>DATE REGISTERED</TH>
+    <TH>STATUS</TH>
     <TH>ADDRESS</TH>
-    <TH>BARANGAY</TH>
-    <TH>BUSINESS_LINE</TH>
-    <TH>ACTIVITY</TH>
-    <TH>REG_DATE</TH>
+    <TH>REGISTRATION CODE</TH>
+    <TH>LIST OF CATEGORIES</TH>
     </TR>";
     while($row = mysqli_fetch_assoc($result)){
         echo"<TR>
         <TD>". $row["REG_ID"]. "</TD>
-        <TD>". $row["BUSINESS_NAME"]. "</TD>
-        <TD>" . $row["TAXPAYER"]. "</TD>
-        <TD>" .$row["TYPE"]. "</TD>
+        <TD>". $row["YEAR"]. "</TD>
+        <TD>". $row["COMPANY_NAME"]. "</TD>
+        <TD>" .$row["DATE_REGISTERED"]. "</TD>
+        <TD>" .$row["STATUS"]. "</TD>
         <TD>" .$row["ADDRESS"]. "</TD>
-        <TD>" .$row["BARANGAY"]. "</TD>
-        <TD>" .$row["BUSINESS_LINE"]. "</TD>
-        <TD>" .$row["ACTIVITY"]. "</TD>
-        <TD>" .$row["REG_DATE"]. "</TD>
+        <TD>" .$row["REGISTRATION_CODE"]. "</TD>
+        <TD>" .$row["CATEGORY_LIST"]. "</TD>
         </TR>";
     }
     echo"</TABLES>";
@@ -106,26 +104,44 @@ $result1 = mysqli_query($conn,$query);
 $user_arr = array();
 while($row = mysqli_fetch_array($result1)){
     $reg_id = $row['REG_ID'];
-    $bs_name = $row['BUSINESS_NAME'];
-    $txpyr = $row['TAXPAYER'];
-    $type = $row['TYPE'];
-    $add = $row['ADDRESS'];
-    $brgy = $row['BARANGAY'];
-    $bs_line = $row['BUSINESS_LINE'];
-    $actv = $row['ACTIVITY'];
-    $reg_date = $row['REG_DATE'];
-    $user_arr[] = array($reg_id,$bs_name,$txpyr,$type,$add,$brgy,$bs_line,$actv,$reg_date);
+    $year = $row['YEAR'];
+    $comp_name = $row['COMPANY_NAME'];
+    $reg_date = $row['DATE_REGISTERED'];
+    $stat = $row['STATUS'];
+    $address = $row['ADDRESS'];
+    $reg_code = $row['REGISTRATION_CODE'];
+    $categ_list = $row['CATEGORY_LIST'];
+    $user_arr[] = array($reg_id,$year,$comp_name,$reg_date,$stat,$address,$reg_code,$categ_list);
 }
 }else if($alpha_srt=="false"){
         $sql = "SELECT * FROM businessdt_tbl ";
         $result = mysqli_query($conn, $sql);
         
         if (mysqli_num_rows($result)> 0){
-            echo"<TABLE border=2 cellpadding=5><TR><TH>Registration ID</TH><TH>BUSINESS_NAME</TH><TH>TAXPAYER</TH><TH>TYPE</TH><TH>ADDRESS</TH><TH>BARANGAY</TH>
-            <TH>BUSINESS_LINE</TH><TH>ACTIVITY</TH><TH>REG_DATE</TH>";
+            echo"<TABLE border=2 cellpadding=5>
+            <TR>
+            <TH>Registration ID</TH>
+            <TH>BUSINESS_NAME</TH>
+            <TH>TAXPAYER</TH>
+            <TH>TYPE</TH>
+            <TH>ADDRESS</TH>
+            <TH>BARANGAY</TH>
+            <TH>BUSINESS_LINE</TH>
+            <TH>ACTIVITY</TH>
+            <TH>REG_DATE</TH>
+            </TR>";
             while($row = mysqli_fetch_assoc($result)){
-                echo"<TR><TD>". $row["REG_ID"]. "</TD><TD>". $row["BUSINESS_NAME"]. "</TD><TD>" . $row["TAXPAYER"]. "</TD><TD>" .$row["TYPE"]. "</TD><TD>" .$row["ADDRESS"]. "</TD>
-                <TD>" .$row["BARANGAY"]. "</TD><TD>" .$row["BUSINESS_LINE"]. "</TD><TD>" .$row["ACTIVITY"]. "</TD><TD>" .$row["REG_DATE"]. "</TD></TR>";
+                echo"<TR>
+                <TD>". $row["REG_ID"]. "</TD>
+                <TD>". $row["BUSINESS_NAME"]. "</TD>
+                <TD>" . $row["TAXPAYER"]. "</TD>
+                <TD>" .$row["TYPE"]. "</TD>
+                <TD>" .$row["ADDRESS"]. "</TD>
+                <TD>" .$row["BARANGAY"]. "</TD>
+                <TD>" .$row["BUSINESS_LINE"]. "</TD>
+                <TD>" .$row["ACTIVITY"]. "</TD>
+                <TD>" .$row["REG_DATE"]. "</TD>
+                </TR>";
             }
             echo"</TABLES>";
         }else {
